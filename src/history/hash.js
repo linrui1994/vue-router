@@ -15,6 +15,7 @@ export class HashHistory extends History {
       return
     }
     ensureSlash()
+    console.log(this)
   }
 
   // this is delayed until the app mounts

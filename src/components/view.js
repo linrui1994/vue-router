@@ -11,11 +11,12 @@ export default {
   },
   render (_, { props, children, parent, data }) {
     data.routerView = true
-
+    // debugger
     // directly use parent context's createElement() function
     // so that components rendered by router-view can resolve named slots
     const h = parent.$createElement
     const name = props.name
+    console.log(name)
     const route = parent.$route
     const cache = parent._routerViewCache || (parent._routerViewCache = {})
 
@@ -33,13 +34,14 @@ export default {
       parent = parent.$parent
     }
     data.routerViewDepth = depth
-
+    console.log(depth)
     // render previous view if the tree is inactive and kept-alive
     if (inactive) {
       return h(cache[name], data, children)
     }
 
     const matched = route.matched[depth]
+    console.log(route)
     // render empty node if no matched route
     if (!matched) {
       cache[name] = null
@@ -81,7 +83,7 @@ export default {
         }
       }
     }
-
+    console.log(component)
     return h(component, data, children)
   }
 }

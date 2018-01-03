@@ -62,6 +62,7 @@ export class History {
   }
 
   transitionTo (location: RawLocation, onComplete?: Function, onAbort?: Function) {
+    console.log('transitionto')
     const route = this.router.match(location, this.current)
     this.confirmTransition(route, () => {
       this.updateRoute(route)
@@ -85,6 +86,7 @@ export class History {
   }
 
   confirmTransition (route: Route, onComplete: Function, onAbort?: Function) {
+    console.log('confirm')
     const current = this.current
     const abort = err => {
       if (isError(err)) {
@@ -183,6 +185,7 @@ export class History {
   }
 
   updateRoute (route: Route) {
+    console.log(route)
     const prev = this.current
     this.current = route
     this.cb && this.cb(route)

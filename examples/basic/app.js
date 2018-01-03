@@ -13,7 +13,7 @@ const Bar = { template: '<div>bar</div>' }
 
 // 3. Create the router
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: __dirname,
   routes: [
     { path: '/', component: Home },
