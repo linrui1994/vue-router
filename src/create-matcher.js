@@ -18,6 +18,7 @@ export function createMatcher (
   router: VueRouter
 ): Matcher {
   const { pathList, pathMap, nameMap } = createRouteMap(routes)
+  console.log(createRouteMap(routes), 'cr')
 
   function addRoutes (routes) {
     createRouteMap(routes, pathList, pathMap, nameMap)

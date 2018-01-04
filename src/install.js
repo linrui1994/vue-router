@@ -15,7 +15,7 @@ export function install (Vue) {
   const registerInstance = (vm, callVal) => {
     let i = vm.$options._parentVnode
     console.log(i)
-    debugger
+    // debugger
     if (isDef(i) && isDef(i = i.data) && isDef(i = i.registerRouteInstance /* 这个在view.js中注册 */)) {
       i(vm, callVal)
     }
