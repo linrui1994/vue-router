@@ -4,7 +4,8 @@ TODOs.md
 test/e2e/reports
 test/e2e/screenshots
 selenium-debug.log
-dist/*.gz
+dist/
 dist/*.map
 explorations
-docs/_book
+docs
+examples
